@@ -1,0 +1,41 @@
+/* Page */
+body {
+    background-color: #C3CDD3;
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+  }
+
+/* Navbar */
+nav{background-color:#93AEBD;}
+    
+li {list-style-type: none;
+    display: inline-block;}
+    
+ul a {display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    font:bold;
+    margin: auto;
+    text-decoration: none;
+       color:black;}
+    
+
+    ul a:hover {background-color: #64C0FF;
+        color: white;}
+    
+        * {box-sizing:border-box}
+    

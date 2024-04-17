@@ -16,27 +16,86 @@
     <meta name="author" content="Jamya Prince">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/Logo.png" alt="Logo" width="400" height="300">
+            <img src="images/Logo.png" alt="Logo" style="width:10%">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Buy.html">Buy</a></li>
                 <li><a href="Sell.html">Sell</a></li>
                 <li><a href="Cart.html">Cart</a></li>
             </ul>
-            <div class="search-container"></div>
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
         </nav>
     </header>
     <main>
         <h1>Popular/featured</h1>
+        <!-- Slideshow container -->
+<div class="slideshow-container">
 
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/TheStrokes.png" style="width:50%" alt="strokes">
+      <div class="text">The Strokes, This is it, $24.99-35.99</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/ElliottSmith.png" style="width:50%" alt="elliott">
+      <div class="text">Elliott Smith, either/or, $23.99-30.99</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/Tyler.png" style="width:50%" alt="tyler">
+      <div class="text">Tyler, the Creator, Flower Boy, $35.99-40.99</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+<!--
         <a href="Buy.html"></a><img src="images/ElliottSmith.png" alt="elliott">
             <p>  Elliott Smith, either/or, $23.99-30.99 </p>
 
@@ -46,6 +105,7 @@
 
         <a href="Buy.html"></a><img src="images/Tyler.png" alt="tyler">
             <p>Tyler, the Creator, Flower Boy, $35.99-40.99</p>
+        -->
         
         <h2>About Us</h2>
             <p>
